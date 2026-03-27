@@ -12,7 +12,6 @@
 
     <div style="display: flex; flex-direction: column; height: 100vh; padding: 0;">
 
-        <!-- HEADER -->
         <header style="display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; width: 100%; box-sizing: border-box; height: 80px; color:#FFE5E5; background: transparent; flex-shrink: 0;">
             <h1 style="width: 150px; margin: 0; text-align: left; font-size: 1.5rem; font-weight: 700; color: #FFE5E5; letter-spacing: 0.04em; filter: drop-shadow(0 0 6px rgba(207,38,38,0.2));"><span style="background: linear-gradient(135deg, #CF2626, #E87676); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 8px rgba(207,38,38,0.5));">AJ</span>WEB</h1>
             <nav style="display: flex; gap: 4vw; align-items: center;">
@@ -26,36 +25,31 @@
             <div style="width: 150px;"></div>
         </header>
 
-        <!-- MAIN -->
         <main style="flex: 1; display: flex; flex-direction: column; overflow: hidden; padding: 0 5% 14px 5%; min-height: 0;">
 
             <h1 style="font-family: 'Cinzel', serif; font-size: clamp(1.8rem, 3.2vw, 2.6rem); font-weight: 700; text-align: center; color: #FFE5E5; text-shadow: 0 0 40px rgba(207,38,38,0.18), 0 0 80px rgba(207,38,38,0.08); margin: 0 0 0.25rem 0; flex-shrink: 0;">Blog</h1>
             <p style="text-align: center; font-size: clamp(0.65rem, 1vw, 0.8rem); color: rgba(232,118,118,0.45); letter-spacing: 0.28em; text-transform: uppercase; margin-bottom: clamp(0.7rem, 1.8vh, 1.3rem); flex-shrink: 0;">Reads &middot; Insights &middot; Updates</p>
 
-            <!-- 3 BLOG CARDS -->
             <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(0.7rem, 1.4vw, 1.3rem); flex: 1; min-height: 0;">
 
-                <!-- ═══════════════ CARD 1 — PPFT ═══════════════ -->
                 <a href="https://terberita.com/pemilihan-ppft-tuai-apresiasi-dekan/" target="_blank" rel="noopener noreferrer"
                     onmouseover="this.style.borderColor='rgba(232,58,58,0.55)'; this.style.boxShadow='inset 0 2px 0 rgba(255,255,255,0.08), 0 16px 40px rgba(0,0,0,0.6), 0 0 40px rgba(207,38,38,0.22)'; this.style.transform='translateY(-4px) scale(1.012)'; this.querySelector('.arrow-icon').style.transform='translateX(4px)'; this.querySelector('.arrow-icon').style.opacity='1';"
                     onmouseout="this.style.borderColor='rgba(207,38,38,0.28)'; this.style.boxShadow='inset 0 2px 0 rgba(255,255,255,0.05), 0 8px 32px rgba(0,0,0,0.5), 0 0 24px rgba(139,0,0,0.12)'; this.style.transform='translateY(0) scale(1)'; this.querySelector('.arrow-icon').style.transform='translateX(0)'; this.querySelector('.arrow-icon').style.opacity='0.6';"
                     style="position: relative; border-radius: 18px; background: #1A0000; border: 1px solid rgba(207,38,38,0.28); box-shadow: inset 0 2px 0 rgba(255,255,255,0.05), 0 8px 32px rgba(0,0,0,0.5), 0 0 24px rgba(139,0,0,0.12); overflow: hidden; cursor: pointer; transition: all 0.35s cubic-bezier(0.25,0.8,0.25,1); display: flex; flex-direction: column; text-decoration: none;">
 
-                    <!-- glow accent -->
                     <div style="position: absolute; top: 0; right: 0; width: 60%; height: 50%; background: radial-gradient(circle at top right, rgba(207,38,38,0.14) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
 
-                    <!-- IMAGE -->
                     <div style="flex: 1; position: relative; overflow: hidden; min-height: 0;">
                         <img src="https://terberita.com/wp-content/uploads/2025/10/IMG-20251008-WA00082-1024x843.jpg"
                              alt="Pemilihan PPFT"
                              style="width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.45) saturate(0.8); transition: filter 0.4s ease;"
                              onmouseover="this.style.filter='brightness(0.55) saturate(0.9)';"
                              onmouseout="this.style.filter='brightness(0.45) saturate(0.8)';">
-                        <!-- gradient overlay bottom -->
+                        
                         <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,0,0,0.97) 0%, rgba(10,0,0,0.7) 40%, rgba(10,0,0,0.15) 100%); z-index: 1;"></div>
-                        <!-- vertical red accent line -->
+                      
                         <div style="position: absolute; left: 0; bottom: 14%; top: 35%; width: 3px; background: linear-gradient(to bottom, transparent, rgba(207,38,38,0.8), transparent); border-radius: 2px; z-index: 2;"></div>
-                        <!-- text content bottom-left -->
+                   
                         <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: clamp(0.8rem,1.8vh,1.3rem) clamp(0.9rem,1.5vw,1.3rem) clamp(0.7rem,1.4vh,1rem) clamp(1.1rem,1.8vw,1.5rem); z-index: 2;">
                             <span style="font-family: 'Cinzel', serif; font-size: clamp(0.82rem, 1.25vw, 1.05rem); font-weight: 700; color: #FFE5E5; line-height: 1.4; margin-bottom: 0.45rem; display: block; text-shadow: 0 2px 8px rgba(0,0,0,0.8);">
                                 Pemilihan PPFT Tuai Apresiasi Dekan
@@ -73,7 +67,6 @@
                     </div>
                 </a>
 
-                <!-- ═══════════════ CARD 2 — NEUROKIT ═══════════════ -->
                 <a href="https://informatika.unsrat.ac.id/pkm-kc-unsrat-dan-lahirnya-neurokit/" target="_blank" rel="noopener noreferrer"
                     onmouseover="this.style.borderColor='rgba(232,58,58,0.55)'; this.style.boxShadow='inset 0 2px 0 rgba(255,255,255,0.08), 0 16px 40px rgba(0,0,0,0.6), 0 0 40px rgba(207,38,38,0.22)'; this.style.transform='translateY(-4px) scale(1.012)'; this.querySelector('.arrow-icon').style.transform='translateX(4px)'; this.querySelector('.arrow-icon').style.opacity='1';"
                     onmouseout="this.style.borderColor='rgba(207,38,38,0.28)'; this.style.boxShadow='inset 0 2px 0 rgba(255,255,255,0.05), 0 8px 32px rgba(0,0,0,0.5), 0 0 24px rgba(139,0,0,0.12)'; this.style.transform='translateY(0) scale(1)'; this.querySelector('.arrow-icon').style.transform='translateX(0)'; this.querySelector('.arrow-icon').style.opacity='0.6';"
@@ -81,7 +74,6 @@
 
                     <div style="position: absolute; top: 0; right: 0; width: 60%; height: 50%; background: radial-gradient(circle at top right, rgba(207,38,38,0.14) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
 
-                    <!-- IMAGE -->
                     <div style="flex: 1; position: relative; overflow: hidden; min-height: 0;">
                         <img src="https://informatika.unsrat.ac.id/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-17-at-13.13.25-800x445.jpeg"
                              alt="PKM-KC NEUROKIT"
@@ -107,7 +99,6 @@
                     </div>
                 </a>
 
-                <!-- ═══════════════ CARD 3 — KOMPAS INTERNET GLOBAL ═══════════════ -->
                 <a href="https://tekno.kompas.com/read/2026/03/27/10582557/peta-internet-global-awal-2026-google-teratas-chatgpt-unjuk-gigi" target="_blank" rel="noopener noreferrer"
                     onmouseover="this.style.borderColor='rgba(232,58,58,0.55)'; this.style.boxShadow='inset 0 2px 0 rgba(255,255,255,0.08), 0 16px 40px rgba(0,0,0,0.6), 0 0 40px rgba(207,38,38,0.22)'; this.style.transform='translateY(-4px) scale(1.012)'; this.querySelector('.arrow-icon').style.transform='translateX(4px)'; this.querySelector('.arrow-icon').style.opacity='1';"
                     onmouseout="this.style.borderColor='rgba(207,38,38,0.28)'; this.style.boxShadow='inset 0 2px 0 rgba(255,255,255,0.05), 0 8px 32px rgba(0,0,0,0.5), 0 0 24px rgba(139,0,0,0.12)'; this.style.transform='translateY(0) scale(1)'; this.querySelector('.arrow-icon').style.transform='translateX(0)'; this.querySelector('.arrow-icon').style.opacity='0.6';"
@@ -115,9 +106,8 @@
 
                     <div style="position: absolute; top: 0; right: 0; width: 60%; height: 50%; background: radial-gradient(circle at top right, rgba(207,38,38,0.14) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
 
-                    <!-- IMAGE — generated visual fallback karena Kompas memblokir direct fetch -->
                     <div style="flex: 1; position: relative; overflow: hidden; min-height: 0; background: linear-gradient(135deg, #0D0000 0%, #1A0000 40%, #0A0505 100%);">
-                        <!-- decorative internet/network SVG background -->
+                        
                         <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.18;">
                             <circle cx="200" cy="140" r="90" fill="none" stroke="#CF2626" stroke-width="1.2"/>
                             <circle cx="200" cy="140" r="55" fill="none" stroke="#CF2626" stroke-width="0.8"/>
@@ -126,7 +116,7 @@
                             <line x1="110" y1="140" x2="290" y2="140" stroke="#CF2626" stroke-width="0.6"/>
                             <ellipse cx="200" cy="140" rx="90" ry="36" fill="none" stroke="#CF2626" stroke-width="0.7"/>
                             <ellipse cx="200" cy="140" rx="90" ry="60" fill="none" stroke="#CF2626" stroke-width="0.5"/>
-                            <!-- nodes -->
+                           
                             <circle cx="200" cy="50" r="4" fill="#CF2626"/>
                             <circle cx="290" cy="140" r="4" fill="#E87676"/>
                             <circle cx="200" cy="230" r="4" fill="#CF2626"/>
@@ -135,7 +125,7 @@
                             <circle cx="245" cy="75" r="3" fill="#CF2626" opacity="0.7"/>
                             <circle cx="155" cy="205" r="3" fill="#CF2626" opacity="0.7"/>
                             <circle cx="245" cy="205" r="3" fill="#CF2626" opacity="0.7"/>
-                            <!-- connection lines from center -->
+                            
                             <line x1="200" y1="140" x2="155" y2="75" stroke="#CF2626" stroke-width="0.5" opacity="0.6"/>
                             <line x1="200" y1="140" x2="245" y2="75" stroke="#CF2626" stroke-width="0.5" opacity="0.6"/>
                             <line x1="200" y1="140" x2="155" y2="205" stroke="#CF2626" stroke-width="0.5" opacity="0.6"/>
