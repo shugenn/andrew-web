@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJWEB - Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body style="font-family: 'Arvo', serif; margin: 0; padding: 0; color: rgba(232,118,118,0.8); background-color: #0A0A0A; line-height: 1.6; height: 100vh; overflow: hidden;">
+
+    <div style="width: 100%; height: 100vh; position: fixed; inset: 0; background: radial-gradient(ellipse 80% 40% at 20% 0%, rgba(139,0,0,0.12) 0%, transparent 60%), radial-gradient(ellipse 60% 30% at 80% 100%, rgba(207,38,38,0.07) 0%, transparent 60%), linear-gradient(180deg, #3D0000 0%, #1A0000 40%, #0A0A0A 100%); z-index: -1;"></div>
+
+    <div style="display: flex; flex-direction: column; height: 100vh; padding: 0;">
+
+        <header style="display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; width: 100%; box-sizing: border-box; height: 80px; color:#FFE5E5; background: transparent; backdrop-filter: blur(0px); border-bottom-color: transparent; box-shadow: none; flex-shrink: 0;">
+            <h1 style="width: 150px; margin: 0; text-align: left; font-size: 1.5rem; font-weight: 700; color: #FFE5E5; letter-spacing: 0.04em; filter: drop-shadow(0 0 6px rgba(207,38,38,0.2));"><span style="background: linear-gradient(135deg, #CF2626, #E87676); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 8px rgba(207,38,38,0.5));">AJ</span>WEB</h1>
+            <nav style="display: flex; gap: 4vw; align-items: center;">
+                <a href="index.html" style="color: rgba(255,229,229,0.6); text-decoration: none; font-size: 0.95rem;" onmouseover="this.style.color='#CF2626'; this.style.textShadow='0 0 12px rgba(207,38,38,0.4)';" onmouseout="this.style.color='rgba(255,229,229,0.6)'; this.style.textShadow='none';">Home</a>
+                <a href="about.html" style="color: rgba(255,229,229,0.6); text-decoration: none; font-size: 0.95rem;" onmouseover="this.style.color='#CF2626'; this.style.textShadow='0 0 12px rgba(207,38,38,0.4)';" onmouseout="this.style.color='rgba(255,229,229,0.6)'; this.style.textShadow='none';">About</a>
+                <a href="gallery.html" style="color: #CF2626; text-decoration: none; font-size: 0.95rem; text-shadow: 0 0 12px rgba(207,38,38,0.4);">Gallery</a>
+                <a href="blog.html" style="color: rgba(255,229,229,0.6); text-decoration: none; font-size: 0.95rem;" onmouseover="this.style.color='#CF2626'; this.style.textShadow='0 0 12px rgba(207,38,38,0.4)';" onmouseout="this.style.color='rgba(255,229,229,0.6)'; this.style.textShadow='none';">Blog</a>
+                <a href="portfolio.html" style="color: rgba(255,229,229,0.6); text-decoration: none; font-size: 0.95rem;" onmouseover="this.style.color='#CF2626'; this.style.textShadow='0 0 12px rgba(207,38,38,0.4)';" onmouseout="this.style.color='rgba(255,229,229,0.6)'; this.style.textShadow='none';">Portfolio</a>
+                <a href="contact.html" style="color: rgba(255,229,229,0.6); text-decoration: none; font-size: 0.95rem;" onmouseover="this.style.color='#CF2626'; this.style.textShadow='0 0 12px rgba(207,38,38,0.4)';" onmouseout="this.style.color='rgba(255,229,229,0.6)'; this.style.textShadow='none';">Contact</a>
+            </nav>
+            <div style="width: 150px;"></div>
+        </header>
+
+        <main style="flex: 1; display: flex; flex-direction: column; overflow: hidden; padding: 0 5% 14px 5%; min-height: 0;">
+
+            <h1 style="font-family: 'Cinzel', serif; font-size: clamp(1.8rem, 3.2vw, 2.6rem); font-weight: 700; text-align: center; color: #FFE5E5; text-shadow: 0 0 40px rgba(207,38,38,0.18), 0 0 80px rgba(207,38,38,0.08); margin: 0 0 0.25rem 0; flex-shrink: 0;">Lifetime Gallery</h1>
+            <p style="text-align: center; font-size: clamp(0.65rem, 1vw, 0.8rem); color: rgba(232,118,118,0.45); letter-spacing: 0.28em; text-transform: uppercase; margin-bottom: clamp(0.7rem, 1.8vh, 1.3rem); flex-shrink: 0;">Memories &middot; Moments &middot; Milestones</p>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(0.7rem, 1.4vw, 1.3rem); flex: 1; min-height: 0;">
+
+                <div id="card-hs"
+                    onclick="openModal('hs')"
+                    onmouseover="this.style.borderColor='rgba(232,58,58,0.55)'; this.style.boxShadow='inset 0 2px 0 rgba(255,255,255,0.08), 0 16px 40px rgba(0,0,0,0.6), 0 0 40px rgba(207,38,38,0.22)'; this.style.transform='translateY(-4px) scale(1.012)'; document.getElementById('arrow-hs').style.transform='translateX(4px)'; document.getElementById('arrow-hs').style.opacity='1';"
+                    onmouseout="this.style.borderColor='rgba(207,38,38,0.28)'; this.style.boxShadow='inset 0 2px 0 rgba(255,255,255,0.05), 0 8px 32px rgba(0,0,0,0.5), 0 0 24px rgba(139,0,0,0.12)'; this.style.transform='translateY(0) scale(1)'; document.getElementById('arrow-hs').style.transform='translateX(0)'; document.getElementById('arrow-hs').style.opacity='0.6';"
+                    style="position: relative; border-radius: 18px; background: #1A0000; border: 1px solid rgba(207,38,38,0.28); box-shadow: inset 0 2px 0 rgba(255,255,255,0.05), 0 8px 32px rgba(0,0,0,0.5), 0 0 24px rgba(139,0,0,0.12); overflow: hidden; cursor: pointer; transition: all 0.35s cubic-bezier(0.25,0.8,0.25,1); display: flex; flex-direction: column;">
+                    <div style="position: absolute; top: 0; right: 0; width: 60%; height: 50%; background: radial-gradient(circle at top right, rgba(207,38,38,0.14) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
+                    <div style="padding: clamp(0.6rem,1.4vh,1rem) clamp(0.8rem,1.4vw,1.2rem); flex-shrink: 0; position: relative; z-index: 2; border-bottom: 1px solid rgba(207,38,38,0.15); display: flex; align-items: center; justify-content: space-between;">
+                        <div style="display: flex; align-items: center; gap: 0.55rem;">
+                            <span style="color: #CF2626; display: inline-flex;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+                            <span style="font-family: 'Cinzel', serif; font-size: clamp(0.75rem,1.2vw,1rem); font-weight: 700; color: #FFE5E5; letter-spacing: 0.03em;">High School</span>
+                        </div>
+                        <span style="font-size: clamp(0.6rem,0.9vw,0.72rem); color: rgba(207,38,38,0.65); font-style: italic;">8 photos</span>
+                    </div>
+                    <div style="flex: 1; position: relative; overflow: hidden; min-height: 0;">
+                        <div id="slide-hs-0" style="position: absolute; inset: 0; opacity: 1; transition: opacity 0.9s ease;">
+                            <img src="hs-photo-1.jpg" alt="High School 1" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.9) saturate(0.95); transform: scale(1.04); transition: transform 6s ease, filter 0.9s ease;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,0,0,0.65) 0%, rgba(10,0,0,0.15) 40%, transparent 70%); z-index: 1;"></div>
+                        </div>
+                        <div id="slide-hs-1" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease;">
+                            <img src="hs-photo-2.jpg" alt="High School 2" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.85) saturate(0.9); transform: scale(1); transition: transform 6s ease, filter 0.9s ease;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,0,0,0.65) 0%, rgba(10,0,0,0.15) 40%, transparent 70%); z-index: 1;"></div>
+                        </div>
+                        <div id="slide-hs-2" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease;">
+                            <img src="hs-photo-3.jpg" alt="High School 3" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.85) saturate(0.9); transform: scale(1); transition: transform 6s ease, filter 0.9s ease;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,0,0,0.65) 0%, rgba(10,0,0,0.15) 40%, transparent 70%); z-index: 1;"></div>
+                        </div>
+                        <div id="slide-hs-3" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease;">
+                            <img src="hs-photo-4.jpg" alt="High School 4" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.85) saturate(0.9); transform: scale(1); transition: transform 6s ease, filter 0.9s ease;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,0,0,0.65) 0%, rgba(10,0,0,0.15) 40%, transparent 70%); z-index: 1;"></div>
+                        </div>
+                        <div style="position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; z-index: 3;">
+                            <div id="dot-hs-0" style="width: 6px; height: 6px; border-radius: 50%; background: #E83A3A; transform: scale(1.3); transition: all 0.3s;"></div>
+                            <div id="dot-hs-1" style="width: 6px; height: 6px; border-radius: 50%; background: rgba(255,229,229,0.3); transition: all 0.3s;"></div>
+                            <div id="dot-hs-2" style="width: 6px; height: 6px; border-radius: 50%; background: rgba(255,229,229,0.3); transition: all 0.3s;"></div>
+                            <div id="dot-hs-3" style="width: 6px; height: 6px; border-radius: 50%; background: rgba(255,229,229,0.3); transition: all 0.3s;"></div>
+                        </div>
+                    </div>
+                    <div style="padding: clamp(0.35rem,0.8vh,0.6rem) clamp(0.8rem,1.4vw,1.2rem); flex-shrink: 0; position: relative; z-index: 2; border-top: 1px solid rgba(207,38,38,0.12); display: flex; align-items: center; justify-content: space-between;">
+                        <span style="font-size: clamp(0.58rem,0.85vw,0.7rem); color: rgba(232,118,118,0.45); letter-spacing: 0.1em;">Click to view all</span>
+                        <span id="arrow-hs" style="color: #CF2626; opacity: 0.6; transition: all 0.3s; display: inline-flex;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+                    </div>
+                </div>
+
+                <div id="card-bn"
+                    onclick="openModal('bn')"
+                    onmouseover="this.style.borderColor='rgba(232,58,58,0.55)'; this.style.boxShadow='inset 0 2px 0 rgba(255,255,255,0.08), 0 16px 40px rgba(0,0,0,0.6), 0 0 40px rgba(207,38,38,0.22)'; this.style.transform='translateY(-4px) scale(1.012)'; document.getElementById('arrow-bn').style.transform='translateX(4px)'; document.getElementById('arrow-bn').style.opacity='1';"
+                    onmouseout="this.style.borderColor='rgba(207,38,38,0.28)'; this.style.boxShadow='inset 0 2px 0 rgba(255,255,255,0.05), 0 8px 32px rgba(0,0,0,0.5), 0 0 24px rgba(139,0,0,0.12)'; this.style.transform='translateY(0) scale(1)'; document.getElementById('arrow-bn').style.transform='translateX(0)'; document.getElementById('arrow-bn').style.opacity='0.6';"
+                    style="position: relative; border-radius: 18px; background: #1A0000; border: 1px solid rgba(207,38,38,0.28); box-shadow: inset 0 2px 0 rgba(255,255,255,0.05), 0 8px 32px rgba(0,0,0,0.5), 0 0 24px rgba(139,0,0,0.12); overflow: hidden; cursor: pointer; transition: all 0.35s cubic-bezier(0.25,0.8,0.25,1); display: flex; flex-direction: column;">
+                    <div style="position: absolute; top: 0; right: 0; width: 60%; height: 50%; background: radial-gradient(circle at top right, rgba(207,38,38,0.14) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
+                    <div style="padding: clamp(0.6rem,1.4vh,1rem) clamp(0.8rem,1.4vw,1.2rem); flex-shrink: 0; position: relative; z-index: 2; border-bottom: 1px solid rgba(207,38,38,0.15); display: flex; align-items: center; justify-content: space-between;">
+                        <div style="display: flex; align-items: center; gap: 0.55rem;">
+                            <span style="color: #CF2626; display: inline-flex;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+                            <span style="font-family: 'Cinzel', serif; font-size: clamp(0.75rem,1.2vw,1rem); font-weight: 700; color: #FFE5E5; letter-spacing: 0.03em;">Bince</span>
+                        </div>
+                        <span style="font-size: clamp(0.6rem,0.9vw,0.72rem); color: rgba(207,38,38,0.65); font-style: italic;">8 photos</span>
+                    </div>
+                    <div style="flex: 1; position: relative; overflow: hidden; min-height: 0;">
+                        <div id="slide-bn-0" style="position: absolute; inset: 0; opacity: 1; transition: opacity 0.9s ease;">
+                            <img src="bn-photo-1.jpg" alt="Bince 1" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.9) saturate(0.95); transform: scale(1.04); transition: transform 6s ease, filter 0.9s ease;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,0,0,0.65) 0%, rgba(10,0,0,0.15) 40%, transparent 70%); z-index: 1;"></div>
+                        </div>
+                        <div id="slide-bn-1" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease;">
+                            <img src="bn-photo-2.jpg" alt="Bince 2" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.85) saturate(0.9); transform: scale(1); transition: transform 6s ease, filter 0.9s ease;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,0,0,0.65) 0%, rgba(10,0,0,0.15) 40%, transparent 70%); z-index: 1;"></div>
+                        </div>
+                        <div id="slide-bn-2" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease;">
+                            <img src="bn-photo-3.jpg" alt="Bince 3" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.85) saturate(0.9); transform: scale(1); transition: transform 6s ease, filter 0.9s ease;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,0,0,0.65) 0%, rgba(10,0,0,0.15) 40%, transparent 70%); z-index: 1;"></div>
+                        </div>
+                        <div id="slide-bn-3" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease;">
+                            <img src="bn-photo-4.jpg" alt="Bince 4" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.85) saturate(0.9); transform: scale(1); transition: transform 6s ease, filter 0.9s ease;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,0,0,0.65) 0%, rgba(10,0,0,0.15) 40%, transparent 70%); z-index: 1;"></div>
+                        </div>
+                        <div style="position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; z-index: 3;">
+                            <div id="dot-bn-0" style="width: 6px; height: 6px; border-radius: 50%; background: #E83A3A; transform: scale(1.3); transition: all 0.3s;"></div>
+                            <div id="dot-bn-1" style="width: 6px; height: 6px; border-radius: 50%; background: rgba(255,229,229,0.3); transition: all 0.3s;"></div>
+                            <div id="dot-bn-2" style="width: 6px; height: 6px; border-radius: 50%; background: rgba(255,229,229,0.3); transition: all 0.3s;"></div>
+                            <div id="dot-bn-3" style="width: 6px; height: 6px; border-radius: 50%; background: rgba(255,229,229,0.3); transition: all 0.3s;"></div>
+                        </div>
+                    </div>
+                    <div style="padding: clamp(0.35rem,0.8vh,0.6rem) clamp(0.8rem,1.4vw,1.2rem); flex-shrink: 0; position: relative; z-index: 2; border-top: 1px solid rgba(207,38,38,0.12); display: flex; align-items: center; justify-content: space-between;">
+                        <span style="font-size: clamp(0.58rem,0.85vw,0.7rem); color: rgba(232,118,118,0.45); letter-spacing: 0.1em;">Click to view all</span>
+                        <span id="arrow-bn" style="color: #CF2626; opacity: 0.6; transition: all 0.3s; display: inline-flex;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+                    </div>
+                </div>
+
+                <div id="card-pp"
+                    onclick="openModal('pp')"
+                    onmouseover="this.style.borderColor='rgba(232,58,58,0.55)'; this.style.boxShadow='inset 0 2px 0 rgba(255,255,255,0.08), 0 16px 40px rgba(0,0,0,0.6), 0 0 40px rgba(207,38,38,0.22)'; this.style.transform='translateY(-4px) scale(1.012)'; document.getElementById('arrow-pp').style.transform='translateX(4px)'; document.getElementById('arrow-pp').style.opacity='1';"
+                    onmouseout="this.style.borderColor='rgba(207,38,38,0.28)'; this.style.boxShadow='inset 0 2px 0 rgba(255,255,255,0.05), 0 8px 32px rgba(0,0,0,0.5), 0 0 24px rgba(139,0,0,0.12)'; this.style.transform='translateY(0) scale(1)'; document.getElementById('arrow-pp').style.transform='translateX(0)'; document.getElementById('arrow-pp').style.opacity='0.6';"
+                    style="position: relative; border-radius: 18px; background: #1A0000; border: 1px solid rgba(207,38,38,0.28); box-shadow: inset 0 2px 0 rgba(255,255,255,0.05), 0 8px 32px rgba(0,0,0,0.5), 0 0 24px rgba(139,0,0,0.12); overflow: hidden; cursor: pointer; transition: all 0.35s cubic-bezier(0.25,0.8,0.25,1); display: flex; flex-direction: column;">
+                    <div style="position: absolute; top: 0; right: 0; width: 60%; height: 50%; background: radial-gradient(circle at top right, rgba(207,38,38,0.14) 0%, transparent 70%); pointer-events: none; z-index: 1;"></div>
+                    <div style="padding: clamp(0.6rem,1.4vh,1rem) clamp(0.8rem,1.4vw,1.2rem); flex-shrink: 0; position: relative; z-index: 2; border-bottom: 1px solid rgba(207,38,38,0.15); display: flex; align-items: center; justify-content: space-between;">
+                        <div style="display: flex; align-items: center; gap: 0.55rem;">
+                            <span style="color: #CF2626; display: inline-flex;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                            <span style="font-family: 'Cinzel', serif; font-size: clamp(0.68rem,1.05vw,0.9rem); font-weight: 700; color: #FFE5E5; letter-spacing: 0.03em;">Putra Putri Fak. Teknik</span>
+                        </div>
+                        <span style="font-size: clamp(0.6rem,0.9vw,0.72rem); color: rgba(207,38,38,0.65); font-style: italic;">8 photos</span>
+                    </div>
+                    <div style="flex: 1; position: relative; overflow: hidden; min-height: 0;">
+                        <div id="slide-pp-0" style="position: absolute; inset: 0; opacity: 1; transition: opacity 0.9s ease;">
+                            <img src="pp-photo-1.jpg" alt="Putra Putri 1" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.9) saturate(0.95); transform: scale(1.04); transition: transform 6s ease, filter 0.9s ease;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,0,0,0.65) 0%, rgba(10,0,0,0.15) 40%, transparent 70%); z-index: 1;"></div>
+                        </div>
+                        <div id="slide-pp-1" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease;">
+                            <img src="pp-photo-2.jpg" alt="Putra Putri 2" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.85) saturate(0.9); transform: scale(1); transition: transform 6s ease, filter 0.9s ease;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,0,0,0.65) 0%, rgba(10,0,0,0.15) 40%, transparent 70%); z-index: 1;"></div>
+                        </div>
+                        <div id="slide-pp-2" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease;">
+                            <img src="pp-photo-3.jpg" alt="Putra Putri 3" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.85) saturate(0.9); transform: scale(1); transition: transform 6s ease, filter 0.9s ease;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,0,0,0.65) 0%, rgba(10,0,0,0.15) 40%, transparent 70%); z-index: 1;"></div>
+                        </div>
+                        <div id="slide-pp-3" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease;">
+                            <img src="pp-photo-4.jpg" alt="Putra Putri 4" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.85) saturate(0.9); transform: scale(1); transition: transform 6s ease, filter 0.9s ease;">
+                            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,0,0,0.65) 0%, rgba(10,0,0,0.15) 40%, transparent 70%); z-index: 1;"></div>
+                        </div>
+                        <div style="position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; z-index: 3;">
+                            <div id="dot-pp-0" style="width: 6px; height: 6px; border-radius: 50%; background: #E83A3A; transform: scale(1.3); transition: all 0.3s;"></div>
+                            <div id="dot-pp-1" style="width: 6px; height: 6px; border-radius: 50%; background: rgba(255,229,229,0.3); transition: all 0.3s;"></div>
+                            <div id="dot-pp-2" style="width: 6px; height: 6px; border-radius: 50%; background: rgba(255,229,229,0.3); transition: all 0.3s;"></div>
+                            <div id="dot-pp-3" style="width: 6px; height: 6px; border-radius: 50%; background: rgba(255,229,229,0.3); transition: all 0.3s;"></div>
+                        </div>
+                    </div>
+                    <div style="padding: clamp(0.35rem,0.8vh,0.6rem) clamp(0.8rem,1.4vw,1.2rem); flex-shrink: 0; position: relative; z-index: 2; border-top: 1px solid rgba(207,38,38,0.12); display: flex; align-items: center; justify-content: space-between;">
+                        <span style="font-size: clamp(0.58rem,0.85vw,0.7rem); color: rgba(232,118,118,0.45); letter-spacing: 0.1em;">Click to view all</span>
+                        <span id="arrow-pp" style="color: #CF2626; opacity: 0.6; transition: all 0.3s; display: inline-flex;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <div id="modal-hs" onclick="if(event.target===this) closeModal('hs')" style="display: none; position: fixed; inset: 0; background: rgba(5,0,0,0.92); z-index: 1000; backdrop-filter: blur(6px); align-items: center; justify-content: center; padding: 2vh 3vw;">
+        <div style="position: relative; background: linear-gradient(145deg, #200000, #0F0000); border: 1px solid rgba(207,38,38,0.35); border-radius: 20px; box-shadow: 0 0 60px rgba(207,38,38,0.18), 0 30px 60px rgba(0,0,0,0.7); width: 100%; max-width: min(90vw, 960px); max-height: 90vh; display: flex; flex-direction: column; overflow: hidden;">
+            <div style="padding: clamp(0.8rem,2vh,1.2rem) clamp(1rem,2.5vw,1.8rem); border-bottom: 1px solid rgba(207,38,38,0.18); display: flex; align-items: center; justify-content: space-between; flex-shrink: 0;">
+                <div style="display: flex; align-items: center; gap: 0.7rem;">
+                    <span style="color: #CF2626; display: inline-flex;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+                    <span style="font-family: 'Cinzel', serif; font-size: clamp(1rem,2vw,1.35rem); font-weight: 700; color: #FFE5E5; letter-spacing: 0.04em;">High School</span>
+                </div>
+                <button onclick="closeModal('hs')" style="background: rgba(207,38,38,0.12); border: 1px solid rgba(207,38,38,0.3); color: #FFE5E5; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1rem; transition: all 0.3s;" onmouseover="this.style.background='rgba(207,38,38,0.3)'; this.style.borderColor='#CF2626'; this.style.transform='rotate(90deg)';" onmouseout="this.style.background='rgba(207,38,38,0.12)'; this.style.borderColor='rgba(207,38,38,0.3)'; this.style.transform='rotate(0deg)';">&#10005;</button>
+            </div>
+            <div style="padding: clamp(0.8rem,2vh,1.3rem) clamp(1rem,2.5vw,1.8rem); overflow-y: auto; flex: 1;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(170px, 28%), 1fr)); gap: clamp(0.5rem,1vw,0.9rem);">
+                    <!-- ▼▼▼ GANTI src="hs-photo-X.jpg" dengan path foto High School Anda ▼▼▼ -->
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="hs-photo-1.jpg" alt="High School 1" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="hs-photo-2.jpg" alt="High School 2" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="hs-photo-3.jpg" alt="High School 3" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="hs-photo-4.jpg" alt="High School 4" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="hs-photo-5.jpg" alt="High School 5" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="hs-photo-6.jpg" alt="High School 6" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="hs-photo-7.jpg" alt="High School 7" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="hs-photo-8.jpg" alt="High School 8" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <!-- ▲▲▲ Tambah atau kurangi blok <div> di atas sesuai jumlah foto ▲▲▲ -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         MODAL — BINCE
+    ══════════════════════════════════════════════ -->
+    <div id="modal-bn" onclick="if(event.target===this) closeModal('bn')" style="display: none; position: fixed; inset: 0; background: rgba(5,0,0,0.92); z-index: 1000; backdrop-filter: blur(6px); align-items: center; justify-content: center; padding: 2vh 3vw;">
+        <div style="position: relative; background: linear-gradient(145deg, #200000, #0F0000); border: 1px solid rgba(207,38,38,0.35); border-radius: 20px; box-shadow: 0 0 60px rgba(207,38,38,0.18), 0 30px 60px rgba(0,0,0,0.7); width: 100%; max-width: min(90vw, 960px); max-height: 90vh; display: flex; flex-direction: column; overflow: hidden;">
+            <div style="padding: clamp(0.8rem,2vh,1.2rem) clamp(1rem,2.5vw,1.8rem); border-bottom: 1px solid rgba(207,38,38,0.18); display: flex; align-items: center; justify-content: space-between; flex-shrink: 0;">
+                <div style="display: flex; align-items: center; gap: 0.7rem;">
+                    <span style="color: #CF2626; display: inline-flex;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+                    <span style="font-family: 'Cinzel', serif; font-size: clamp(1rem,2vw,1.35rem); font-weight: 700; color: #FFE5E5; letter-spacing: 0.04em;">Bince</span>
+                </div>
+                <button onclick="closeModal('bn')" style="background: rgba(207,38,38,0.12); border: 1px solid rgba(207,38,38,0.3); color: #FFE5E5; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1rem; transition: all 0.3s;" onmouseover="this.style.background='rgba(207,38,38,0.3)'; this.style.borderColor='#CF2626'; this.style.transform='rotate(90deg)';" onmouseout="this.style.background='rgba(207,38,38,0.12)'; this.style.borderColor='rgba(207,38,38,0.3)'; this.style.transform='rotate(0deg)';">&#10005;</button>
+            </div>
+            <div style="padding: clamp(0.8rem,2vh,1.3rem) clamp(1rem,2.5vw,1.8rem); overflow-y: auto; flex: 1;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(170px, 28%), 1fr)); gap: clamp(0.5rem,1vw,0.9rem);">
+                    <!-- ▼▼▼ GANTI src="bn-photo-X.jpg" dengan path foto Bince Anda ▼▼▼ -->
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="bn-photo-1.jpg" alt="Bince 1" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="bn-photo-2.jpg" alt="Bince 2" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="bn-photo-3.jpg" alt="Bince 3" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="bn-photo-4.jpg" alt="Bince 4" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="bn-photo-5.jpg" alt="Bince 5" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="bn-photo-6.jpg" alt="Bince 6" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="bn-photo-7.jpg" alt="Bince 7" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="bn-photo-8.jpg" alt="Bince 8" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <!-- ▲▲▲ Tambah atau kurangi blok <div> di atas sesuai jumlah foto ▲▲▲ -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         MODAL — PUTRA PUTRI FAKULTAS TEKNIK
+    ══════════════════════════════════════════════ -->
+    <div id="modal-pp" onclick="if(event.target===this) closeModal('pp')" style="display: none; position: fixed; inset: 0; background: rgba(5,0,0,0.92); z-index: 1000; backdrop-filter: blur(6px); align-items: center; justify-content: center; padding: 2vh 3vw;">
+        <div style="position: relative; background: linear-gradient(145deg, #200000, #0F0000); border: 1px solid rgba(207,38,38,0.35); border-radius: 20px; box-shadow: 0 0 60px rgba(207,38,38,0.18), 0 30px 60px rgba(0,0,0,0.7); width: 100%; max-width: min(90vw, 960px); max-height: 90vh; display: flex; flex-direction: column; overflow: hidden;">
+            <div style="padding: clamp(0.8rem,2vh,1.2rem) clamp(1rem,2.5vw,1.8rem); border-bottom: 1px solid rgba(207,38,38,0.18); display: flex; align-items: center; justify-content: space-between; flex-shrink: 0;">
+                <div style="display: flex; align-items: center; gap: 0.7rem;">
+                    <span style="color: #CF2626; display: inline-flex;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                    <span style="font-family: 'Cinzel', serif; font-size: clamp(1rem,2vw,1.35rem); font-weight: 700; color: #FFE5E5; letter-spacing: 0.04em;">Putra Putri Fakultas Teknik</span>
+                </div>
+                <button onclick="closeModal('pp')" style="background: rgba(207,38,38,0.12); border: 1px solid rgba(207,38,38,0.3); color: #FFE5E5; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1rem; transition: all 0.3s;" onmouseover="this.style.background='rgba(207,38,38,0.3)'; this.style.borderColor='#CF2626'; this.style.transform='rotate(90deg)';" onmouseout="this.style.background='rgba(207,38,38,0.12)'; this.style.borderColor='rgba(207,38,38,0.3)'; this.style.transform='rotate(0deg)';">&#10005;</button>
+            </div>
+            <div style="padding: clamp(0.8rem,2vh,1.3rem) clamp(1rem,2.5vw,1.8rem); overflow-y: auto; flex: 1;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(170px, 28%), 1fr)); gap: clamp(0.5rem,1vw,0.9rem);">
+                    <!-- ▼▼▼ GANTI src="pp-photo-X.jpg" dengan path foto Putra Putri Fak. Teknik Anda ▼▼▼ -->
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="pp-photo-1.jpg" alt="Putra Putri 1" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="pp-photo-2.jpg" alt="Putra Putri 2" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="pp-photo-3.jpg" alt="Putra Putri 3" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="pp-photo-4.jpg" alt="Putra Putri 4" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="pp-photo-5.jpg" alt="Putra Putri 5" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="pp-photo-6.jpg" alt="Putra Putri 6" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="pp-photo-7.jpg" alt="Putra Putri 7" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <div style="border-radius: 10px; overflow: hidden; border: 1px solid rgba(207,38,38,0.2); aspect-ratio: 1/1; background: #2A0000; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(207,38,38,0.6)'; this.style.transform='scale(1.03)'; this.style.boxShadow='0 0 20px rgba(207,38,38,0.2)';" onmouseout="this.style.borderColor='rgba(207,38,38,0.2)'; this.style.transform='scale(1)'; this.style.boxShadow='none';"><img src="pp-photo-8.jpg" alt="Putra Putri 8" style="width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.92);"></div>
+                    <!-- ▲▲▲ Tambah atau kurangi blok <div> di atas sesuai jumlah foto ▲▲▲ -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT (inline di body, bukan di head) -->
+    <script>
+        // ── Slideshow state ──
+        var ss = {
+            hs: { cur: 0, total: 4, timer: null },
+            bn: { cur: 0, total: 4, timer: null },
+            pp: { cur: 0, total: 4, timer: null }
+        };
+
+        function goSlide(key, idx) {
+            var s = ss[key];
+            // Hide old
+            var oldSlide = document.getElementById('slide-' + key + '-' + s.cur);
+            var oldDot   = document.getElementById('dot-'   + key + '-' + s.cur);
+            if (oldSlide) { oldSlide.style.opacity = '0'; var i = oldSlide.querySelector('img'); if(i){i.style.transform='scale(1)'; i.style.filter='brightness(0.85) saturate(0.9)';} }
+            if (oldDot)   { oldDot.style.background = 'rgba(255,229,229,0.3)'; oldDot.style.transform = 'scale(1)'; }
+            s.cur = idx;
+            // Show new
+            var newSlide = document.getElementById('slide-' + key + '-' + s.cur);
+            var newDot   = document.getElementById('dot-'   + key + '-' + s.cur);
+            if (newSlide) { newSlide.style.opacity = '1'; var j = newSlide.querySelector('img'); if(j){j.style.transform='scale(1.04)'; j.style.filter='brightness(0.95) saturate(1)';} }
+            if (newDot)   { newDot.style.background = '#E83A3A'; newDot.style.transform = 'scale(1.3)'; }
+        }
+
+        function startSS(key) {
+            var s = ss[key];
+            if (s.timer) clearInterval(s.timer);
+            s.timer = setInterval(function(){ goSlide(key, (ss[key].cur + 1) % ss[key].total); }, 3200);
+        }
+
+        function stopSS(key) {
+            if (ss[key].timer) { clearInterval(ss[key].timer); ss[key].timer = null; }
+        }
+
+        function openModal(key) {
+            stopSS(key);
+            var m = document.getElementById('modal-' + key);
+            if (m) { m.style.display = 'flex'; }
+        }
+
+        function closeModal(key) {
+            var m = document.getElementById('modal-' + key);
+            if (m) { m.style.display = 'none'; }
+            startSS(key);
+        }
+
+        // ESC to close
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                ['hs','bn','pp'].forEach(function(k) {
+                    var m = document.getElementById('modal-' + k);
+                    if (m && m.style.display === 'flex') closeModal(k);
+                });
+            }
+        });
+
+        // Start all slideshows
+        window.onload = function() {
+            startSS('hs');
+            startSS('bn');
+            startSS('pp');
+        };
+    </script>
+
+</body>
+</html>
