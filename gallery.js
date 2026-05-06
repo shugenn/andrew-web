@@ -5,9 +5,7 @@ var photos = {
         'highschool-photo/hs-3.jpg',
         'highschool-photo/hs-4.jpg',
         'highschool-photo/hs-5.jpg',
-        'highschool-photo/hs-6.jpg',
-        'highschool-photo/hs-7.jpg',
-        'highschool-photo/hs-8.JPG'
+        'highschool-photo/hs-6.jpg'
     ],
     bn: [
         'bince-photo/bince-1.jpeg',
@@ -15,9 +13,7 @@ var photos = {
         'bince-photo/bince-3.jpeg',
         'bince-photo/bince-4.jpeg',
         'bince-photo/bince-5.jpeg',
-        'bince-photo/bince-6.jpeg',
-        'bince-photo/bince-7.jpeg',
-        'bince-photo/bince-8.jpeg'
+        'bince-photo/bince-6.jpeg'
     ],
     pp: [
         'ppft-photo/ppft-1.jpg',
@@ -25,9 +21,7 @@ var photos = {
         'ppft-photo/ppft-3.jpg',
         'ppft-photo/ppft-4.jpg',
         'ppft-photo/ppft-5.jpg',
-        'ppft-photo/ppft-6.jpg',
-        'ppft-photo/ppft-7.jpg',
-        'ppft-photo/ppft-8.jpg'
+        'ppft-photo/ppft-6.jpg'
     ]
 };
 
@@ -137,7 +131,32 @@ function closeLightboxFull() {
     closeModal(lb.key);
 }
 
+function openVideoPlayer(src, title) {
+    var modal = document.getElementById('video-modal');
+    var player = document.getElementById('video-player');
+    var titleEl = document.getElementById('video-modal-title');
+
+    player.src = src;
+    titleEl.textContent = title;
+    modal.style.display = 'flex';
+    player.play();
+}
+
+function closeVideoPlayer() {
+    var modal = document.getElementById('video-modal');
+    var player = document.getElementById('video-player');
+
+    player.pause();
+    player.src = '';
+    modal.style.display = 'none';
+}
+
 document.addEventListener('keydown', function (e) {
+    var vm = document.getElementById('video-modal');
+    if (vm && vm.style.display === 'flex') {
+        if (e.key === 'Escape') closeVideoPlayer();
+        return;
+    }
     var lb_open = document.getElementById('lightbox').style.display === 'flex';
     if (lb_open) {
         if (e.key === 'ArrowLeft')  shiftLightbox(-1);
